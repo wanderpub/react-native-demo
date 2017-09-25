@@ -1,5 +1,5 @@
 import {observable} from 'mobx'
-import api from './api'
+import {githublist} from './api'
 
 class CounterStore {
   @observable counter = 0;
@@ -23,13 +23,17 @@ class CounterStore {
   }
 
   getFromRemote() {
-    api.get('/hello')
-      .then( (r)=> {
-        if(r.ok)
-          this.remoteCounter = r.data;
-        else
-          this.remoteCounter = 'error';
-      });
+    githublist().then((r)=>{
+      console.log(r.data)
+      this.remoteCounter += 10
+    })
+    // api.get('/hello')
+    //   .then( (r)=> {
+    //     if(r.ok)
+    //       this.remoteCounter = r.data;
+    //     else
+    //       this.remoteCounter = 'error';
+    //   });
   }
 }
 

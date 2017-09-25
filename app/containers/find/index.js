@@ -3,30 +3,24 @@ import { Text, View, StyleSheet } from 'react-native'
 import Button from 'react-native-button'
 import { observer } from 'mobx-react/native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
-import ApplicationStyles from '../styles'
+import ApplicationStyles from '../../styles'
 
 @observer
-export default class CheckinScreen extends Component {
+export default class FindScreen extends Component {
   static navigationOptions = {
-    title: '我',
+    title: '发现',
     tabBarIcon: ({tintColor}) => (
-      <Icon name='user' color={tintColor} size={24}/>
+      <Icon name='search' color={tintColor} size={24}/>
     )
   };
 
   render() {
     return (
       <View style={[styles.container, ApplicationStyles.container]}>
-        <Text style={styles.welcome} >
-          CheckinScreen
+        <Icon style={styles.welcome} name="search" size={100} />
+        <Text style={styles.text} >
+          Welcome to Mobx React Native Template 发现
         </Text>
-        <Button onPress={()=>this.props.navigation.navigate('ThirdScreen')} >
-          To ThirdScreen
-        </Button>
-        <Button onPress={()=>this.props.navigation.navigate('ImageDemo')} >
-          To ImageDemo
-        </Button>
       </View>
     )
   }
@@ -35,11 +29,18 @@ export default class CheckinScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
   welcome: {
     textAlign: 'center',
-    margin: 10
+    margin: 10,
+    marginTop: 100
+  },
+  text: {
+    textAlign: 'center',
+    margin: 10,
+  },
+  textRed: {
+    color: 'red',
   },
 });
