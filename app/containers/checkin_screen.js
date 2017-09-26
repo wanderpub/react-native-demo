@@ -27,6 +27,9 @@ export default class CheckinScreen extends Component {
         <Button onPress={()=>this.props.navigation.navigate('ImageDemo')} >
           To ImageDemo
         </Button>
+        <Button onPress={()=>this.props.navigation.navigate('Setting')} >
+          To Setting
+        </Button>
       </View>
     )
   }
