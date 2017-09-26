@@ -1,12 +1,13 @@
+
+基于react-native-template-mobx修改的React Native 和 mobx 融合项目。
+练手使用。
+
+
 # Mobx React Native Template
 
 It's an experienced template for a new react native project with mobx architecture from react-native-template-mobx.
 
 这是一个有经验的 React Native 和 mobx 融合的脚手架项目.
-
-> Notice: This project has rename from `mobx-react-native-template` to `react-native-template-mobx` because of the convention of React Native Template published at React Native 0.43 version. here is the [link](https://github.com/facebook/react-native/commit/17c175a149bc410a9b167b31f13474d8c6e9832c#diff-e1bddafdbb592817072925c6b7aabcd2)
-
-> react-native-template-mobx has supported react native 0.44.
 
 ## Prepare
 
@@ -67,7 +68,7 @@ First, [mobx](https://github.com/mobxjs/mobx) is the key of the template. If you
 
 Second, we apply some useful react-native components for you, of course, zero configuration:
 
-* apisauce ( API provider )
+* axios ( API provider )
 * react-native-button
 * react-native-vector-icons
 * react-navigation
