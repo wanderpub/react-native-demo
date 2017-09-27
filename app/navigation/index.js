@@ -12,6 +12,7 @@ import MainScreen from '../containers/main/'
 import ImageDemo from '../containers/image_demo'
 
 import Setting from '../containers/setting'
+import MeSetting from '../containers/me/setting'
 
 const WelcomeTab = StackNavigator({
   MainScreen: { screen: MainScreen },
@@ -20,6 +21,7 @@ const WelcomeTab = StackNavigator({
 });
 
 const MyTab = StackNavigator({
+  MeSetting: { screen: MeSetting },
   CheckinScreen: { screen: CheckinScreen },
   ThirdScreen: { screen: ThirdScreen },
   ImageDemo: { screen: ImageDemo },
