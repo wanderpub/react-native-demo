@@ -1,29 +1,33 @@
 import React, {Component,PropTypes} from 'react';
-import {StyleSheet, View, Text, ScrollView, Switch, TouchableOpacity,TouchableNativeFeedback, Platform, PixelRatio,Alert} from 'react-native';
+import {StyleSheet, View, Text,Dimensions, ScrollView,Image, Switch, TouchableOpacity,TouchableNativeFeedback, Platform, PixelRatio,Alert} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'
 import {px2dp} from '../../utils/px2dp';
+const {height, width} = Dimensions.get('window'); 
 
 export default class Setting extends Component {
 	constructor(props) {
-		super(props);
+        super(props);
+        // this._onScroll = this._onScroll.bind(this);
     }
     static navigationOptions = {
         tabBarVisible: true,
         title: '我',
+        header:null,
         tabBarIcon: ({tintColor}) => (
             <Icon name='user' color={tintColor} size={24}/>
         )
     }
     _onPressEmail(){
-        Alert.alert('提示','111')
+        // Alert.alert('提示','111')
+        this.props.navigation.navigate('Test')
     }
     _onChange(value){
         Alert.alert('提示',value+'111')
     }
     render(){
         return (
-            <View style={{flex:1,backgroundColor:'#f4f4f4'}}>
-            <ScrollView>
+        <View style={{flex:1,backgroundColor:'#f4f4f4'}}>
+           <ScrollView> 
                 <View style={styles.list}>
                     <Item text="邮箱" subText="未设置" onPress={this._onPressEmail}/>
                     <Item text="手机号" subText="未设置"/>
@@ -144,4 +148,12 @@ const styles = StyleSheet.create({
         borderBottomColor: '#c4c4c4',
         borderBottomWidth: 1 / PixelRatio.get()
     },
+    img: {
+        width:width,
+        height:200,
+        flex:1,
+        position: 'absolute',
+        top: 0,
+        left:0
+    }
 })

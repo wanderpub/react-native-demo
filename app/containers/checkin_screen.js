@@ -30,6 +30,20 @@ export default class CheckinScreen extends Component {
         <Button onPress={()=>this.props.navigation.navigate('Setting')} >
           To Setting
         </Button>
+        <Button onPress={()=>this.props.navigation.navigate('Test')} >
+          To Test
+        </Button>
+        <Button onPress={()=>this.props.navigation.navigate('Talks')} >
+          To Talks
+        </Button>
+        <Button onPress={()=>this.props.navigation.navigate('DetailPage')} >
+          To DetailPage
+        </Button>
+        <Button onPress={()=>this.props.navigation.navigate('Detail')} >
+          To Detail
+        </Button>
+        
+        
       </View>
     )
   }

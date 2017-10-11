@@ -13,6 +13,11 @@ import ImageDemo from '../containers/image_demo'
 
 import Setting from '../containers/setting'
 import MeSetting from '../containers/me/setting'
+import Test from '../containers/me/test'
+import Talks from '../containers/me/talk'
+import DetailPage from '../containers/goods'
+
+import Detail from '../containers/me/detail'
 
 const WelcomeTab = StackNavigator({
   MainScreen: { screen: MainScreen },
@@ -21,11 +26,15 @@ const WelcomeTab = StackNavigator({
 });
 
 const MyTab = StackNavigator({
-  MeSetting: { screen: MeSetting },
   CheckinScreen: { screen: CheckinScreen },
+  Talks: { screen: Talks },
+  DetailPage: { screen: DetailPage },
+  MeSetting: { screen: MeSetting },
   ThirdScreen: { screen: ThirdScreen },
   ImageDemo: { screen: ImageDemo },
-  Setting: { screen: Setting }
+  Setting: { screen: Setting },
+  Test: {screen: Test},
+  Detail:{screen:Detail}
 })
 
 const CateTab = StackNavigator({
